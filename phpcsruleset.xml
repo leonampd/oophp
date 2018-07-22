@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ruleset name="Custom Standard">
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+
+    <arg name="colors"/>
+
+    <rule ref="PSR2"/>
+    <rule ref="PSR1">
+        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
+    </rule>
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent"/>
+</ruleset>
