@@ -1,11 +1,8 @@
 <?php
-// Entrar via teclado com a base e a altura de um retangulo, calcular e exibir
+// Definir a base e a altura de um retangulo, calcular e exibir
 // sua area.
 
-echo 'Digite o valor da base: ';
-$base   = fgets(STDIN);
+$base   = $_POST['post'];
+$altura = $_POST['altura'];
 
-echo 'Digite o valor da altura: ';
-$altura = fgets(STDIN);
-
-echo 'O valor da áre é: '. $base * $altura . PHP_EOL;
+echo 'O valor da área é: '. $base * $altura . '<br >';

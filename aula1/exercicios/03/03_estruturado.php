@@ -1,11 +1,8 @@
 <?php
-// Entrar via teclado com o valor da cotação do dolar e uma certa quantidade
+// Defina o valor da cotação do dolar e uma certa quantidade
 // de dolares. Calcular e exibir o valor correspondente em Reais (R$)
 
-echo 'Digite o valor da cotacao: ';
-$cotacao = fgets(STDIN);
+$cotacao = $_POST['cotacao'];
+$valorDolar = $_POST['quantia_dolar'];
 
-echo 'Digite o valor em dólar: ';
-$valorDolar = fgets(STDIN);
-
-echo 'Resultado: ' . $cotacao * $valorDolar . PHP_EOL;
+echo 'Resultado: ' . $cotacao * $valorDolar . '<br>';

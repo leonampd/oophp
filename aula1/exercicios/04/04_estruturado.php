@@ -1,5 +1,5 @@
 <?php
-// Entrar com o peso e a altura de uma determinada pessoa. Apos a digitação,
+// Definir duas variaveis com o peso e a altura de uma determinada pessoa.
 // exibir se esta pessoa esta ou nao com seu peso ideal. Veja tabela da
 // relação peso/altura
 
@@ -12,18 +12,15 @@
  * R >= 25 Acima do peso
  */
 
-echo 'Digite o peso: ';
-$peso = fgets(STDIN);
-
-echo 'Digite a altura:';
-$altura = fgets(STDIN);
+$peso = $_POST['peso'];
+$altura = $_POST['altura'];
 
 $resultado = $peso / pow(2, $altura);
 
 if ($resultado < 20) {
-    echo 'Abaixo do peso' . PHP_EOL;
+    echo 'Abaixo do peso' . '<br>';
 } elseif ($resultado >= 20 && $resultado < 25) {
-    echo 'Peso ideal' . PHP_EOL;
+    echo 'Peso ideal' . '<br>';
 } else {
-    echo 'Acima do peso' . PHP_EOL;
+    echo 'Acima do peso' . '<br>';
 }

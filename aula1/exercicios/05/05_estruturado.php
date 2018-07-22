@@ -1,6 +1,6 @@
 <?php
-// Entrar com o peso, o sexo e a altura de uma determinada pessoa. Apos a
-// digitacao, exibir se esta pessoa esta ou não com seu peso ideal. Veja
+// Definir o peso, o sexo e a altura de uma determinada pessoa. Exibir se
+// esta pessoa esta ou não com seu peso ideal. Veja
 // tabela da relacao peso/altura
 
 /**
@@ -19,31 +19,26 @@
  *
  */
 
-echo 'Digite o peso: ';
-$peso = fgets(STDIN);
-
-echo 'Digite a altura:';
-$altura = fgets(STDIN);
-
-echo 'Digite o gênero:';
-$genero = fgets(STDIN);
+$peso = $_POST['peso'];
+$altura = $_POST['altura'];
+$genero = $_POST['genero'];
 
 $resultado = $peso / pow(2, $altura);
 
 if ($genero == 'm') {
     if ($resultado < 20) {
-        echo 'Abaixo do peso' . PHP_EOL;
+        echo 'Abaixo do peso' . '<br>';
     } elseif ($resultado >= 20 && $resultado < 25) {
-        echo 'Peso ideal' . PHP_EOL;
+        echo 'Peso ideal' . '<br>';
     } else {
-        echo 'Acima do peso' . PHP_EOL;
+        echo 'Acima do peso' . '<br>';
     }
 } else {
     if ($resultado < 19) {
-        echo 'Abaixo do peso' . PHP_EOL;
+        echo 'Abaixo do peso' . '<br>';
     } elseif ($resultado >= 19 && $resultado < 24) {
-        echo 'Peso ideal' . PHP_EOL;
+        echo 'Peso ideal' . '<br>';
     } else {
-        echo 'Acima do peso' . PHP_EOL;
+        echo 'Acima do peso' . '<br>';
     }
 }
