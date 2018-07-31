@@ -16,7 +16,8 @@ class BMW implements Veiculo
         return $this->marca;
     }
 
-    public function getMotor(){
+    public function getMotor()
+    {
         return $this->motor;
     }
 }

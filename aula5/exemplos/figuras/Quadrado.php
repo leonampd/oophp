@@ -2,8 +2,8 @@
 
 class Quadrado implements FiguraGeometrica
 {
-    public function area(){
+    public function area()
+    {
         return $this->lado * $this->lado;
     }
-
 }
