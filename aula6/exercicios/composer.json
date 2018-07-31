@@ -1,0 +1,15 @@
+{
+    "name": "digitalhouse/ecommerce",
+    "authors": [
+        {
+            "name": "Leonam Pereira Dias",
+            "email": "leonam.pd@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+        "psr-4":{
+            "Digitalhouse\\":"classes/"
+        }
+    }
+}
