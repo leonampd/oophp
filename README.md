@@ -12,7 +12,6 @@ Quantidade de aulas: 6
 - Apresentação prática: "tornando" um código estruturado orientado a objetos
 - "require" para load das classes dentro do programa
 - Exercícios com base na apresentação acima
-  - Criação de uma conta no github
   - Exercícios práticos
 
 ## [Aula 2](https://github.com/leonampd/oophp/blob/master/aula2/README.md)
