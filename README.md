@@ -16,32 +16,36 @@ Quantidade de aulas: 6
 
 ## [Aula 2](https://github.com/leonampd/oophp/blob/master/aula2/README.md)
 
-**Abstração**
+**Abstração (Parte 1)**
 
 - Apresentação do conceito de abstração
   - Classes e métodos abstratos
   - Composição/Agregação de objetos
-  - Herança
-- Composer
-  - o que é o composer
-  - namespaces
-  - PSRs: PHP-Fig, PSR-2 e PSR-4 (Autoload)
 - Exercícios
+
 ## [Aula 3](https://github.com/leonampd/oophp/blob/master/aula3/README.md)
 
-**Encapsulamento**
+**Abstração (Parte 2)
+
+- Herança
+  - Classes "mãe"/"filhas"
 
 ## [Aula 4](https://github.com/leonampd/oophp/blob/master/aula4/README.md)
 
-**Polimorfismo**
+**Encapsulamento**
+
+- Apresentação do conceito de encapsulamento
+  - visibilidate _public_, _private_, _protected_
 
 ## [Aula 5](https://github.com/leonampd/oophp/blob/master/aula5/README.md)
 
-**S.O.L.I.D**
+**Polimorfismo**
 
 ## [Aula 6](https://github.com/leonampd/oophp/blob/master/aula6/README.md)
 
-**Design Patterns - Gang of four**
+**Abstração (Parte 3)**
+
+- Interfaces
 
 ## [Aula 7](https://github.com/leonampd/oophp/blob/master/aula7/README.md)
 
