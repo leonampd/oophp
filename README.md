@@ -1,10 +1,6 @@
 # Plano de aulas - Digital House - Orientação a objetos
 
-Quantidade de aulas: 7
-
-Premissas: 
-- Utilização de git
-- Práticas de mercado
+Quantidade de aulas: 6
 
 ## [Aula 1](https://github.com/leonampd/oophp/blob/master/aula1/README.md)
 
