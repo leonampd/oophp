@@ -12,7 +12,7 @@ Exemplo:
 $indice = $peso / pow($altura);
 ```
 
-Quando se abstrai a complexidade e se "escode" parte do comportamento através da definição de uma classe, um dos resultados obtidos é:
+Quando se abstrai a complexidade e se "esconde" parte do comportamento através da definição de uma classe, um dos resultados obtidos é:
 
 - flexibilidade, dado que o mesmo código pode ser reaproveitado em outro local
 - código mais legível e semântico
@@ -60,7 +60,7 @@ class Imc
     }
 }
 
-//programa.ph
+//programa.php
 
 $pessoa  = new Pessoa(75, 1.73);
 $imc = new Imc($pessoa);
