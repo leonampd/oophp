@@ -1,100 +1,67 @@
-## Polimorfismo
+## Encapsulamento
 
-**polimorfismo**
-_substantivo masculino_
+>"The point of encapsulation isn't really about hidding data, but in hidding design decisions";
 
-1. qualidade ou estado de ser capaz de assumir diferentes formas
-2. **fisioquímica**: _m.q._ Alotropia
+__Robert C. Martin (Uncle Bob)_
 
-Assim como a definição do dicionário diz, polimorfismo no contexto de OO é a capacidade que um objeto tem de de assumir formas e comportamentos diferentes diante de um participante que o opera baseado em uma abstração.
-Essa abstração pode ser obtida através de herança ou até mesmo de Interfaces.
+Assim como visto em **abstração** onde se oculta, abstrai, informações irrelevantes para agentes externos. O encapsulamento em conjunto com a abstração provê isso de uma maneira ainda mais completa. Em grande parte dos casos, encapsulamento serve para esconder operações que não devem ser conhecidas por outros objetos, ou melhor dizendo, participantes de um dado contexto de software.
 
 ```php
-//Colaborador.php
-
-abstract class Colaborador
+<?php
+// CartaoCredito.php
+class CartaoCredito
 {
-    protected $nome;
-    protected $salarioBase;
+    private $numero;
+    private $cvv;
+    private $dataExpiracao;
+    private $portador;
 
-    public function __construct($nome, $salarioBase)
+    public function __construct
+    (
+        $numero
+        $cvv,
+        $dataExpiracao,
+        $portador
+    )
     {
-        $this->nome = $nome;
-        $this->salarioBase = $salarioBase;
-    }
-
-    public function getNome()
-    {
-        return $this->nome;
-    }
-
-    abstract public function salario();
-}
-
-// Desenvolvedor.php
-class Desenvolvedor extends Colaborador
-{
-    protected $horasExtras;
-    private $valorHoraExtra = 60;
-
-    public function __construct($nome, $salarioBase, $horasExtras)
-    {
-        $this->horasExtras = $horasExtras;
-        parent::__construct($nome, $salarioBase);
-    }
-
-    public function salario()
-    {
-        return $this->salarioBase + ($this->horasExtras * $this->valorHoraExtra);
+        $this->numero = $numero;
+        $this->cvv = $cvv;
+        $this->dataExpiracao = $dataExpiracao;
+        $this->portador = $portador;
     }
 }
 
-// Comercial.php
-class Comercial extends Colaborador
+// CaixaEletrônico.php
+class CaixaEletronico
 {
-    protected $comissao;
+    private $cartaoCredito;
 
-    public function __construct($nome, $salarioBase, $comissao)
+    public function __construct($cartaoCredito)
     {
-        $this->comissao = $comissao;
-        parent::__construct($nome, $salarioBase);
-    }
-
-    public function salario()
-    {
-        return $this->salarioBase + $this->comissao;
-    }
-}
-
-
-//FolhaPagamento.php
-
-class FolhaPagamento
-{
-    protected $colaboradores;
-
-    public function __construct($colaboradores)
-    {
-        $this->colaboradores = $colaboradores;
-    }
-
-    public function gerarFolha()
-    {
-        foreach($this->colaboradores as $colaborador) {
-            echo 'Nome:' . $colaborador->getNome() . ' Salário: R$' . $colaborador->salario();
+        if ($this->validarCartao($cartaoCredito)) {
+            $this->cartaoCredito = $cartaoCredito;
         }
+
+        throw new Exception('Cartão de crédito inválido');
+    }
+
+    // inacessivel externamente. Pertence e somente pode ser usado por esta classe
+    // escode uma decisao de design
+    private function validarCartao()
+    {
+        $cartaoValido = ... // algoritmo de validacao
+
+        if ($cartaoValido === true) {
+            return true;
+        }
+
+        return false;
+    }
+
+    // visivel externamente
+    public function sacar()
+    {
+       // code... 
     }
 }
-
-
-//programa.php
-
-$colaboradores = [];
-
-$colaboradores[] = new Desenvolvedor('Leonam Dias', 3000, 5);
-$colaboradores[] = new Comercial('Manoel Dias', 2500, 3000);
-
-$folha = new FolhaPagaento($colaboradores);
-$folha->gerarFolha();
 ```
-
