@@ -67,3 +67,43 @@ $imc = new Imc($pessoa);
 
 echo $imc->calculoIndice();
 ```
+
+Uma vez definidas as abstrações de um dado contexto, como dito e mostrado acima.
+A reutilização de código se torna simplificada. Existem algumas formas de se
+reaproveitar código:
+
+## Composição
+
+Visto que orientação a objetos acontece com a interação e troca de mensagens
+entre objetos, a **composição** acontece quando um objeto é composto _N_ outros
+objetos. É uma relação onde o objeto "A" _TEM UM_ objeto "B".
+
+Exemplo:
+
+```php
+<?php
+// Carro.php
+class Carro
+{
+    private $rodas;
+    private $motor;
+    
+    // métodos de um carro...
+}
+
+// Roda.php
+class Roda
+{
+    private $aro;
+    
+    // métodos de uma porta
+}
+
+// Motor.php
+class Motor
+{
+    private $potencia;
+    
+    // métodos de um motor
+}
+```
