@@ -68,6 +68,41 @@ class Pessoa
 
 ```
 
+##### Método construtor
+
+É um método "especial" que toda e qualquer classe possui. Ele é executado sempre que um novo objeto for instanciado com `$obj = new MinhaClasse()`.
+Como o nome diz, este método é executado na "construção" de um objeto e ele pode receber parâmetros ou não:
+
+```php
+<?php
+
+//Retangulo.php
+
+class Retangulo
+{
+    private $base;
+    private $altura
+
+    // metodo construtor
+    public function __construct($baseParametro, $alturaParametro)
+    {
+        $this->base = $baseParametro;
+        $this->altura = $alturaParametro;
+    }
+}
+
+
+// MinhaClasseQualquer.php
+
+class MinhaClasseQualquer
+{
+    public function __construct()
+    {
+        // algum codigo que faça sentido ser executado sempre que um objeto desta classe for instanciado
+    }
+}
+```
+
 As classes, propriedades e métodos por si só não representam nenhum valor. Porém quando utilizada em um "programa":
 ```php
 <?php
