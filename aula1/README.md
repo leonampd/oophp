@@ -142,3 +142,10 @@ echo $retangulo->area(); // 300
 #### Instâncias
 
 Uma instância representa um objeto ("indivíduo") de uma determinada classe. Dentro de uma aplicação é possível utilizar mais de uma instância ao mesmo tempo de diferentes classes ou não.
+
+#### $this
+
+Partindo do princípio que uma classe é um "molde", um novo "tipo" dentro do sistema e que _n_ instâncias podem ser criadas a partir
+ desse modelo, a palavra reservada `$this` tem o papel de contextualizar e representar os dados de um dado objeto de modo que o 
+ interpretador da linguagem entenda de qual objeto/instância se trata. É através do uso do `$this` que o interpretador da linguagem consegue
+ "diferenciar" um objeto de outro.
