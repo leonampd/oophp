@@ -46,7 +46,3 @@ Quantidade de aulas: 6
 **Abstração (Parte 3)**
 
 - Interfaces
-
-## [Aula 7](https://github.com/leonampd/oophp/blob/master/aula7/README.md)
-
-- Desafio proposto: Coding Dojo para a criação de uma To-Do list
