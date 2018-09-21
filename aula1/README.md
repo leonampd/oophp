@@ -41,9 +41,9 @@ Aparecem dentro de uma classe e podem ser entendidas como as características de
 
 class Pessoa
 {
-    public $corDosOlhos;
-    public $altura;
-    public $peso;
+    private $corDosOlhos;
+    private $altura;
+    private $peso;
 }
 
 ```
