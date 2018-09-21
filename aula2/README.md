@@ -49,6 +49,8 @@ class Pessoa
 // Imc.php
 class Imc
 {
+    private $pessoa;
+
     public function __construct($pessoa)
     {
         $this->pessoa = $pessoa;
